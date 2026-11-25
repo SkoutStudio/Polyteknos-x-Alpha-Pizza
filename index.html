@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ΠΟΛΥΤΕΚΝΟΣ × Alpha Pizza | Διάλεξε την εμπειρία σου</title>
+<link rel="preload" as="image" href="assets/GyroHero.webp" type="image/webp">
+<link rel="preload" as="image" href="assets/PizzaHero.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
@@ -11,7 +13,7 @@
 :root{--black:#0b0b0b;--charcoal:#171717;--orange:#ff7a00;--red:#d93622;--gold:#d4a64a;--white:#f8f6f2;--muted:rgba(248,246,242,.72);--glass:rgba(255,255,255,.07);--border:rgba(255,255,255,.13)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Manrope,sans-serif;color:var(--white);background:var(--black);overflow-x:hidden}a{text-decoration:none;color:inherit}.page-bg{position:fixed;inset:0;z-index:-5;background:radial-gradient(circle at 22% 18%,rgba(255,122,0,.22),transparent 34%),radial-gradient(circle at 78% 20%,rgba(217,54,34,.22),transparent 34%),linear-gradient(180deg,#050505,#0b0b0b 50%,#15100a)}.cursor-glow{position:fixed;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,0,.14),transparent 65%);pointer-events:none;transform:translate(-50%,-50%);z-index:-1;filter:blur(8px)}
 .navbar{position:fixed;top:20px;left:50%;transform:translateX(-50%);width:min(1180px,calc(100% - 32px));height:76px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;z-index:50;background:rgba(10,10,10,.52);border:1px solid var(--border);border-radius:999px;backdrop-filter:blur(22px);transition:.35s}.navbar.scrolled{height:62px;top:12px;background:rgba(10,10,10,.78)}.logo{font-weight:900;letter-spacing:.06em;color:var(--gold);white-space:nowrap}.nav-links{display:flex;gap:24px;color:var(--muted);font-size:.9rem}.nav-links a:hover{color:var(--orange)}.nav-actions{display:flex;align-items:center;gap:10px}.lang-switch{display:flex;gap:5px;padding:5px;border:1px solid var(--border);background:rgba(255,255,255,.05);border-radius:999px}.lang-switch button{border:0;background:transparent;color:var(--muted);font-weight:900;font-size:.72rem;padding:7px 9px;border-radius:999px;cursor:pointer}.lang-switch button.active{background:linear-gradient(135deg,var(--orange),var(--gold));color:#180900}.nav-cta{padding:12px 16px;border-radius:999px;background:var(--orange);font-weight:900;color:#180900}.hamburger{display:none;width:42px;height:42px;border:1px solid var(--border);border-radius:50%;background:rgba(255,255,255,.06);cursor:pointer;place-items:center}.hamburger span{width:18px;height:2px;background:var(--white);display:block;position:relative}.hamburger span:before,.hamburger span:after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--white);transition:.25s}.hamburger span:before{top:-6px}.hamburger span:after{top:6px}.mobile-menu{display:none;position:fixed;top:84px;left:16px;right:16px;z-index:45;padding:18px;border-radius:28px;background:rgba(10,10,10,.92);border:1px solid var(--border);backdrop-filter:blur(20px)}.mobile-menu a{display:block;padding:15px 12px;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.08)}.mobile-menu a:last-child{border-bottom:0}.mobile-menu.open{display:block}
-.hero-choice{min-height:100vh;position:relative;padding:128px 5vw 70px;display:grid;place-items:center;overflow:hidden}.particles{position:absolute;inset:0;overflow:hidden;z-index:-1}.spark{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--orange);box-shadow:0 0 14px var(--orange);animation:rise linear infinite}.choice-intro{text-align:center;max-width:900px;margin-bottom:28px;z-index:3}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:900;margin-bottom:16px}.choice-intro h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,8vw,7rem);line-height:.92;letter-spacing:-.055em}.choice-intro p{color:var(--muted);font-size:clamp(1.05rem,2vw,1.35rem);margin-top:18px}.experience-grid{width:min(1200px,100%);display:grid;grid-template-columns:1fr 1fr;gap:22px;z-index:4}.experience-card{position:relative;min-height:520px;border-radius:42px;overflow:hidden;border:1px solid var(--border);background:#111;box-shadow:0 35px 110px rgba(0,0,0,.45);display:flex;align-items:flex-end;padding:38px;isolation:isolate;transition:.55s cubic-bezier(.2,.8,.2,1)}.experience-card:hover{transform:translateY(-10px) scale(1.015);border-color:rgba(255,122,0,.55)}.experience-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.88));z-index:-1}.experience-card.gyros{background:radial-gradient(circle at 50% 30%,rgba(255,122,0,.42),transparent 38%),url('assets/gyro-hero.png') center/cover,#15100a}.experience-card.pizza{background:radial-gradient(circle at 50% 25%,rgba(217,54,34,.45),transparent 40%),url('assets/PizzaHero.png') center/cover,#140908}.card-content{max-width:470px}.brand-kicker{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--border);color:var(--gold);font-weight:900;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}.experience-card h2{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6.2rem);line-height:.88;letter-spacing:-.05em;margin:18px 0 14px}.experience-card p{color:var(--muted);line-height:1.75}.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{padding:14px 20px;border-radius:999px;font-weight:900;display:inline-flex;align-items:center;justify-content:center;transition:.3s}.btn.primary{background:linear-gradient(135deg,var(--orange),var(--gold));color:#180900}.btn.secondary{border:1px solid var(--border);background:rgba(255,255,255,.08);backdrop-filter:blur(12px)}.split-label{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);z-index:8;width:150px;height:150px;border-radius:50%;display:grid;place-items:center;text-align:center;background:rgba(10,10,10,.78);border:1px solid var(--border);backdrop-filter:blur(18px);box-shadow:0 25px 80px rgba(0,0,0,.45);color:var(--gold);font-weight:900;letter-spacing:.04em}
+.hero-choice{min-height:100vh;position:relative;padding:128px 5vw 70px;display:grid;place-items:center;overflow:hidden}.particles{position:absolute;inset:0;overflow:hidden;z-index:-1}.spark{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--orange);box-shadow:0 0 14px var(--orange);animation:rise linear infinite}.choice-intro{text-align:center;max-width:900px;margin-bottom:28px;z-index:3}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:900;margin-bottom:16px}.choice-intro h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,8vw,7rem);line-height:.92;letter-spacing:-.055em}.choice-intro p{color:var(--muted);font-size:clamp(1.05rem,2vw,1.35rem);margin-top:18px}.experience-grid{width:min(1200px,100%);display:grid;grid-template-columns:1fr 1fr;gap:22px;z-index:4}.experience-card{position:relative;min-height:520px;border-radius:42px;overflow:hidden;border:1px solid var(--border);background:#111;box-shadow:0 35px 110px rgba(0,0,0,.45);display:flex;align-items:flex-end;padding:38px;isolation:isolate;transition:.55s cubic-bezier(.2,.8,.2,1)}.experience-card:hover{transform:translateY(-10px) scale(1.015);border-color:rgba(255,122,0,.55)}.experience-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.88));z-index:-1}.experience-card.gyros{background:radial-gradient(circle at 50% 30%,rgba(255,122,0,.42),transparent 38%),url('assets/GyroHero.webp') center/cover,#15100a}.experience-card.pizza{background:radial-gradient(circle at 50% 25%,rgba(217,54,34,.45),transparent 40%),url('assets/PizzaHero.webp') center/cover,#140908}.card-content{max-width:470px}.brand-kicker{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--border);color:var(--gold);font-weight:900;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}.experience-card h2{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6.2rem);line-height:.88;letter-spacing:-.05em;margin:18px 0 14px}.experience-card p{color:var(--muted);line-height:1.75}.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{padding:14px 20px;border-radius:999px;font-weight:900;display:inline-flex;align-items:center;justify-content:center;transition:.3s}.btn.primary{background:linear-gradient(135deg,var(--orange),var(--gold));color:#180900}.btn.secondary{border:1px solid var(--border);background:rgba(255,255,255,.08);backdrop-filter:blur(12px)}.split-label{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);z-index:8;width:150px;height:150px;border-radius:50%;display:grid;place-items:center;text-align:center;background:rgba(10,10,10,.78);border:1px solid var(--border);backdrop-filter:blur(18px);box-shadow:0 25px 80px rgba(0,0,0,.45);color:var(--gold);font-weight:900;letter-spacing:.04em}
 .section{padding:115px 7vw;position:relative}.section-heading{text-align:center;max-width:900px;margin:0 auto 54px}.section-heading h2,.section-copy h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.8vw,5.2rem);line-height:.96;letter-spacing:-.045em}.section-heading p:not(.eyebrow),.section-copy p:not(.eyebrow){color:var(--muted);line-height:1.85;margin-top:22px;font-size:1.08rem}.story{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:center}.story-panel,.menu-card,.review-card,.contact-card,.map-card,.fusion-card{border:1px solid var(--border);background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));border-radius:34px;backdrop-filter:blur(18px);box-shadow:0 24px 80px rgba(0,0,0,.25)}.story-panel{padding:36px}.story-panel h3{font-size:1.55rem;margin:18px 0 10px}.story-panel p,.menu-card p,.review-card p,.fusion-card p,.contact-info{color:var(--muted);line-height:1.75}.story-stack{display:grid;gap:18px}.highlight{color:var(--gold);font-weight:900}.fusion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.fusion-card{padding:30px;position:relative;overflow:hidden}.fusion-card span{color:var(--gold);font-weight:900}.fusion-card h3{font-size:1.45rem;margin:14px 0 10px}.fusion-card:after{content:"";position:absolute;inset:auto -25% -55% -25%;height:130px;background:radial-gradient(circle,rgba(255,122,0,.28),transparent 70%);opacity:0;transition:.35s}.fusion-card:hover:after{opacity:1}.two-menus{display:grid;grid-template-columns:1fr 1fr;gap:22px}.menu-box h3{font-family:'Playfair Display',serif;font-size:2.7rem;margin-bottom:22px}.menu-grid{display:grid;gap:16px}.menu-card{padding:26px}.menu-card span{color:var(--gold);font-weight:900}.menu-card h4{margin:10px 0 8px;font-size:1.2rem}.reviews-track{display:flex;gap:18px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}.review-card{min-width:320px;padding:28px;animation:slideReviews 20s linear infinite}.review-card div{color:var(--gold);margin-bottom:14px;letter-spacing:.12em}.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}.contact-card{padding:44px}.contact-info{margin:26px 0}.map-card{min-height:420px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,122,0,.24),rgba(212,166,74,.08)),repeating-linear-gradient(45deg,rgba(255,255,255,.045) 0 1px,transparent 1px 28px),#111}.map-pin{padding:18px 24px;border-radius:999px;background:var(--orange);color:#160900;font-weight:900}.footer{padding:70px 7vw;text-align:center;border-top:1px solid var(--border);background:#080808}.footer h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:clamp(2.3rem,5vw,4.8rem)}.footer p{color:var(--muted);margin:14px 0 24px}.socials{display:flex;justify-content:center;gap:22px;color:var(--gold)}.reveal{opacity:0;transform:translateY(38px);transition:.8s cubic-bezier(.2,.8,.2,1)}.reveal.active{opacity:1;transform:translateY(0)}@keyframes rise{from{transform:translateY(0);opacity:0}15%{opacity:1}to{transform:translateY(-100vh);opacity:0}}@keyframes slideReviews{from{transform:translateX(0)}to{transform:translateX(-690px)}}
 @media(max-width:950px){.nav-links,.nav-cta{display:none}.hamburger{display:grid}.navbar{height:62px;top:12px;width:calc(100% - 20px);padding:0 10px 0 16px}.logo{font-size:.76rem;letter-spacing:.035em}.nav-actions{gap:6px}.lang-switch{padding:4px}.lang-switch button{padding:7px 8px;font-size:.66rem}.hero-choice{padding:104px 16px 50px;min-height:auto}.choice-intro h1{font-size:clamp(2.45rem,12vw,4.2rem)}.experience-grid{grid-template-columns:1fr;gap:16px}.experience-card{min-height:380px;border-radius:30px;padding:26px}.experience-card h2{font-size:clamp(2.6rem,13vw,4.4rem)}.split-label{position:relative;left:auto;top:auto;transform:none;margin:18px auto;width:auto;height:auto;border-radius:999px;padding:12px 18px}.section{padding:78px 18px;overflow:hidden}.story,.two-menus,.contact{grid-template-columns:1fr;gap:24px}.fusion-grid{grid-template-columns:1fr}.section-heading h2,.section-copy h2{font-size:clamp(2.1rem,10vw,3.4rem)}.reviews-track{overflow-x:auto;mask-image:none;scroll-snap-type:x mandatory;padding-bottom:8px}.review-card{min-width:84vw;animation:none;scroll-snap-align:start}.map-card{min-height:300px}.btn{width:100%}.btn-row{flex-direction:column}.socials{flex-wrap:wrap}}
   
@@ -802,7 +804,7 @@
     <div class="particles" aria-hidden="true"></div>
 
     <a href="#gyros-gallery" class="hero-side hero-gyros reveal" id="gyros">
-      <div class="hero-media" style="background-image:url('assets/GyroHero.png')"></div>
+      <div class="hero-media" style="background-image:url('assets/GyroHero.webp')"></div>
       <div class="hero-overlay gyros-overlay"></div>
       <div class="hero-content left-content">
         <span class="brand-kicker" data-i18n="gyrosKicker">Αυθεντικός γύρος</span>
@@ -813,7 +815,7 @@
     </a>
 
     <a href="#pizza-gallery" class="hero-side hero-pizza reveal" id="pizza">
-      <div class="hero-media" style="background-image:url('assets/PizzaHero.png')"></div>
+      <div class="hero-media" style="background-image:url('assets/PizzaHero.webp')"></div>
       <div class="hero-overlay pizza-overlay"></div>
       <div class="hero-content right-content">
         <span class="brand-kicker" data-i18n="pizzaKicker">Η πίτσα στην κορυφή</span>
@@ -829,7 +831,7 @@
   <main>
     <section class="section story" id="story"><div class="section-copy reveal"><p class="eyebrow" data-i18n="storyEyebrow">Η ιστορία καθορίζει το τώρα</p><h2 data-i18n="storyTitle">Από τα καράβια της Μυτιλήνης στο σήμερα.</h2><p data-i18n="storyText">Η ιστορία δεν είναι διακόσμηση. Είναι αυτό που δίνει νόημα στη γεύση. Ο μπαμπάς Πολύτεκνος ήταν στα καράβια και όταν γύριζε όλοι τον φώναζαν “Α” για την ποιότητα των υλικών του. Με τα χρόνια, αυτό το “Α” έμεινε. Έτσι γεννιέται το Alpha Pizza: μια νέα εμπειρία που συνδέεται με την οικογένεια, το λιμάνι και την αυθεντικότητα.</p></div><div class="story-stack">
   <article class="story-panel reveal">
-    <div class="story-panel-photo"><img src="assets/AlphaLogo.JPG" alt="Alpha Pizza logo" data-i18n-alt="altAlphaLogo"></div>
+    <div class="story-panel-photo"><img src="assets/AlphaLogo.webp" alt="Alpha Pizza logo" data-i18n-alt="altAlphaLogo" width="1600" height="1200" loading="lazy" decoding="async"></div>
     <div class="story-panel-body">
       <span class="highlight">01</span>
       <h3 data-i18n="storyCard1Title">Το “Α” που έγινε ταυτότητα</h3>
@@ -837,7 +839,7 @@
     </div>
   </article>
   <article class="story-panel reveal">
-    <div class="story-panel-photo"><img src="assets/PolyteknosOutside.JPG" alt="Μπροστά στο λιμάνι της Μυτιλήνης" data-i18n-alt="altHarbor"></div>
+    <div class="story-panel-photo"><img src="assets/PolyteknosOutside.webp" alt="Μπροστά στο λιμάνι της Μυτιλήνης" data-i18n-alt="altHarbor" width="1200" height="1600" loading="lazy" decoding="async"></div>
     <div class="story-panel-body">
       <span class="highlight">02</span>
       <h3 data-i18n="storyCard2Title">Μπροστά στο λιμάνι</h3>
@@ -863,31 +865,31 @@
 
     <div class="photo-grid">
       <article class="photo-card large">
-        <img src="assets/GyrosPita.PNG" alt="Πίτα γύρος" data-i18n-alt="altGyrosPita">
+        <img src="assets/GyrosPita.webp" alt="Πίτα γύρος" data-i18n-alt="altGyrosPita" width="1448" height="1086" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card tall">
-        <img src="assets/SouvlakiKotopoulo.PNG" alt="Σουβλάκι κοτόπουλο" data-i18n-alt="altChickenSouvlaki">
+        <img src="assets/SouvlakiKotopoulo.webp" alt="Σουβλάκι κοτόπουλο" data-i18n-alt="altChickenSouvlaki" width="1086" height="1448" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card tall">
-        <img src="assets/Sausage.PNG" alt="Λουκάνικο" data-i18n-alt="altSausage">
+        <img src="assets/Sausage.webp" alt="Λουκάνικο" data-i18n-alt="altSausage" width="1448" height="1086" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card">
-        <img src="assets/KebabKotopoulo.PNG" alt="Κεμπάπ κοτόπουλο" data-i18n-alt="altChickenKebab">
+        <img src="assets/KebabKotopoulo.webp" alt="Κεμπάπ κοτόπουλο" data-i18n-alt="altChickenKebab" width="1448" height="1086" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card">
-        <img src="assets/Kopsidia.PNG" alt="Μερίδα γύρος" data-i18n-alt="altGyrosPlate">
+        <img src="assets/Kopsidia.webp" alt="Μερίδα γύρος" data-i18n-alt="altGyrosPlate" width="1086" height="1448" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card">
-        <img src="assets/Kotompeikon.PNG" alt="Κοτομπέικον" data-i18n-alt="altKotompeikon">
+        <img src="assets/Kotompeikon.webp" alt="Κοτομπέικον" data-i18n-alt="altKotompeikon" width="1448" height="1086" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card">
-        <img src="assets/Burger.PNG" alt="Burger" data-i18n-alt="altBurger">
+        <img src="assets/Burger.webp" alt="Burger" data-i18n-alt="altBurger" width="1448" height="1086" loading="lazy" decoding="async">
       </article>
     </div>
   </div>
@@ -903,19 +905,19 @@
 
     <div class="photo-grid">
       <article class="photo-card large">
-        <img src="assets/GreekSalad.PNG" alt="Χωριάτικη σαλάτα" data-i18n-alt="altGreekSalad">
+        <img src="assets/GreekSalad.webp" alt="Χωριάτικη σαλάτα" data-i18n-alt="altGreekSalad" width="1448" height="1086" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card">
-        <img src="assets/ChefSalad_.PNG" alt="Chef salad" data-i18n-alt="altChefSalad">
+        <img src="assets/ChefSalad.webp" alt="Chef salad" data-i18n-alt="altChefSalad" width="1448" height="1086" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card">
-        <img src="assets/Caesar salad_.PNG" alt="Caesar salad" data-i18n-alt="altCaesarSalad">
+        <img src="assets/CaesarSalad.webp" alt="Caesar salad" data-i18n-alt="altCaesarSalad" width="1448" height="1086" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card large">
-        <img src="assets/OrangeSalad.png" alt="Σαλάτα με πορτοκάλι" data-i18n-alt="altOrangeSalad">
+        <img src="assets/OrangeSalad.webp" alt="Σαλάτα με πορτοκάλι" data-i18n-alt="altOrangeSalad" width="1254" height="1254" loading="lazy" decoding="async">
       </article>
     </div>
   </div>
@@ -931,27 +933,27 @@
 
     <div class="photo-grid">
       <article class="photo-card large">
-        <img src="assets/PizzaPiperies.png" alt="Πίτσα με πιπεριές" data-i18n-alt="altPepperPizza">
+        <img src="assets/PizzaPiperies.webp" alt="Πίτσα με πιπεριές" data-i18n-alt="altPepperPizza" width="1254" height="1254" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card tall">
-        <img src="assets/SousamenioPeinirli.png" alt="Σουσαμένιο πεϊνιρλί" data-i18n-alt="altPeinirli">
+        <img src="assets/SousamenioPeinirli.webp" alt="Σουσαμένιο πεϊνιρλί" data-i18n-alt="altPeinirli" width="1086" height="1448" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card tall">
-        <img src="assets/TetragoniPizzza.png" alt="Τετράγωνη πίτσα" data-i18n-alt="altSquarePizza">
+        <img src="assets/TetragoniPizzza.webp" alt="Τετράγωνη πίτσα" data-i18n-alt="altSquarePizza" width="1254" height="1254" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card large">
-        <img src="assets/PizzaSweet.png" alt="Γλυκιά πίτσα" data-i18n-alt="altSweetPizza">
+        <img src="assets/PizzaSweet.webp" alt="Γλυκιά πίτσα" data-i18n-alt="altSweetPizza" width="1254" height="1254" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card large">
-        <img src="assets/PizzaGyros.PNG" alt="Πίτσα με γύρο" data-i18n-alt="altPizzaGyros">
+        <img src="assets/PizzaGyros.webp" alt="Πίτσα με γύρο" data-i18n-alt="altPizzaGyros" width="1086" height="1448" loading="lazy" decoding="async">
       </article>
 
       <article class="photo-card large">
-        <img src="assets/SquareSweetPizza.PNG" alt="Γλυκιά τετράγωνη πίτσα" data-i18n-alt="altSquareSweetPizza">
+        <img src="assets/SquareSweetPizza.webp" alt="Γλυκιά τετράγωνη πίτσα" data-i18n-alt="altSquareSweetPizza" width="1535" height="1024" loading="lazy" decoding="async">
       </article>
     </div>
   </div>
